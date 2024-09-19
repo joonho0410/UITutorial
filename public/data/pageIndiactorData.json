@@ -1,0 +1,25 @@
+{
+    "steps": [
+      {
+        "title": "1단계",
+        "content": "유의사항 확인",
+        "state": "done"
+      },
+      {
+        "title": "2단계",
+        "content": "신청인 정보",
+        "state": "current"
+      },
+      {
+        "title": "3단계",
+        "content": "이사 전 살던 곳",
+        "state": "upComing"
+      },
+      {
+        "title": "4단계",
+        "content": "이사 온 곳",
+        "state": "upComing"
+      }
+    ]
+}
+  
