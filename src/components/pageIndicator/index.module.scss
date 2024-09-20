@@ -1,35 +1,36 @@
 .stepList {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .container {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
 }
 
 .done:not(:last-child) {
-    &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        top: 1rem;
-        height: 0.1rem;
-        background-color: #003675;
-        z-index: 3;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 1rem;
+    height: 0.1rem;
+    background-color: #003675;
+    z-index: 3;
+  }
 }
 
-.current:not(:last-child), .upComing:not(:last-child) {
-    &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        top: 1rem;
-        height: 0.1rem;
-        background-color: gray;
-        z-index: 3;
-    }
+.current:not(:last-child),
+.upComing:not(:last-child) {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 1rem;
+    height: 0.1rem;
+    background-color: gray;
+    z-index: 3;
+  }
 }

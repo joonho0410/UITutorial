@@ -1,7 +1,6 @@
 type PageIndicatorType = {
-    title: string
-    content: string
-    state: "done" | "current" | "upComing"
-}
+  title: string;
+  content: string;
+};
 
-export default PageIndicatorType
+export default PageIndicatorType;

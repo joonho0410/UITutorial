@@ -1,20 +1,37 @@
-import data from "@/data/pageIndiactorData.json"
-import PageIndicatorContent from "../pageIndicatorContent/pageIndicatorContent"
-import PageIndicatorType from "@/types/pageIndicatorType"
-import styles from "./index.module.scss"
+import PageIndicatorContent from "../pageIndicatorContent/pageIndicatorContent";
+import PageIndicatorType from "@/types/pageIndicatorType";
+import styles from "./index.module.scss";
 
-const mockData = data.steps as PageIndicatorType[]
-
-function PageIndicator () {
-    return (
-        <ol className={styles.stepList}>
-            {mockData.map((e) => {
-                return <li key={e.title} className={`${styles.container} ${styles[e.state]}`}>
-                    <PageIndicatorContent title={e.title} content={e.content} state={e.state} />
-                </li>
-            })}
-        </ol>
-    )    
+function findState(idx: number, step: number) {
+  if (idx < step) return "done";
+  if (idx == step) return "current";
+  return "upComing";
 }
 
-export default PageIndicator
+function PageIndicator({
+  steps,
+  curStep,
+}: {
+  steps: PageIndicatorType[];
+  curStep: number;
+}) {
+  return (
+    <ol className={styles.stepList}>
+      {steps.map((e, idx) => {
+        let state = findState(idx, curStep);
+
+        return (
+          <li key={e.title} className={`${styles.container} ${styles[state]}`}>
+            <PageIndicatorContent
+              title={e.title}
+              content={e.content}
+              state={state}
+            />
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
+
+export default PageIndicator;

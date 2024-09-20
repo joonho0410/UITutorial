@@ -1,20 +1,26 @@
 .circle {
-    position: relative;
-    width: 2rem;
-    height: 2rem;
-    padding: 1rem;
-    border-radius: 50%;
-    z-index: 4;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  z-index: 4;
 }
 
-.done, .current, .upComing {
-    @extend .circle;
+.done,
+.current,
+.upComing {
+  @extend .circle;
 }
 
-.done, .current {
-    background-color: #003675;
+.done,
+.current {
+  background-color: #003675;
 }
 
 .upComing {
-    background-color: gray;
+  background-color: gray;
+}
+
+.title {
+  padding-top: 0.5rem;
 }
