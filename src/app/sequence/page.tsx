@@ -13,8 +13,8 @@ export default function TestProcessPage() {
       <ul className={styles.selector}>
         <h3> Examples </h3>
         <li> 주소지 변경 </li>
-        <li> 주소지 변경 </li>
-        <li> 주소지 변경 </li>
+        <li> 배달 신청 </li>
+        <li> 구독 신청 </li>
       </ul>
       <div className={styles.content}>
         <SeqSection steps={steps} title={title} contents={contents} />
