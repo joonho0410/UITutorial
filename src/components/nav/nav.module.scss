@@ -1,0 +1,28 @@
+.container {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+    height: 5vh;
+    padding: 0 1vw;
+}
+
+.leftContents {
+    position: relative;
+    display: flex;
+    font-weight: bold;
+}
+
+.rightContents {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.contents {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(53, 51, 51);
+}

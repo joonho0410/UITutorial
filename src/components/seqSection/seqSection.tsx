@@ -24,14 +24,16 @@ function SeqSection({ title, steps, contents }: Props) {
   }
 
   return (
-    <section>
+    <section className={styles.container}>
       <h1> {title} </h1>
       <PageIndicator steps={steps} curStep={curStep} />
       {curStep < contents.length ? (
         <form className={styles.contents} onSubmit={handleSubmit}>
           {curStep < contents.length && contents[curStep]}
-          {(curStep != 0 && curStep != steps.length) && <button onClick={handlePrev} type="button"> 이전으로 </button> }
-          <button type="submit"> 다음으로 </button>
+          <div className={styles.buttonContainer}>
+            {(curStep != 0 && curStep != steps.length) && <button className={styles.prev} onClick={handlePrev} type="button"> 이전으로 </button> }
+            <button className={styles.next} type="submit"> 다음으로 </button>
+          </div>
         </form>
       ) : (
         <span> done!</span>

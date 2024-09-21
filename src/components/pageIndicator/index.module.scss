@@ -1,10 +1,16 @@
 .stepList {
   display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  padding-top: 2rem;
+  padding-left: 5rem;
   list-style: none;
 }
 
 .container {
   display: flex;
+  text-align: start;
   flex: 1;
   flex-direction: column;
   position: relative;

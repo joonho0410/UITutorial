@@ -7,5 +7,18 @@ export default function TestProcessPage() {
   const { steps, title } = data;
   const contents = [<BasicForm />, <BasicForm />, <BasicForm />, <BasicForm />];
 
-  return <SeqSection steps={steps} title={title} contents={contents} />;
+  // return <SeqSection steps={steps} title={title} contents={contents} />;
+  return (
+    <div className={styles.container}>
+      <ul className={styles.selector}>
+        <h3> Examples </h3>
+        <li> 주소지 변경 </li>
+        <li> 주소지 변경 </li>
+        <li> 주소지 변경 </li>
+      </ul>
+      <div className={styles.content}>
+        <SeqSection steps={steps} title={title} contents={contents} />
+      </div>
+    </div>
+  )
 }

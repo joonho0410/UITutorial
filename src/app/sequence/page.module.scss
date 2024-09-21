@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+
+    h3 {
+        display: inline-block;
+        padding: 1rem 0.4rem;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+}
+
+.selector {
+    flex: 2;
+    > li {
+        display: block;
+        font-size: 1.5rem;
+        padding: 0.5rem 0.2rem;
+        border: 1px solid;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
+
+.content {
+    flex: 8;
+    padding: 1rem 2rem;
+}
